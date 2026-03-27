@@ -4,10 +4,12 @@
 Access contacts, calendar, todos, attendance, AI tables and more with zero boilerplate, get structured JSON responses ready for automation, and leverage built-in Agent Skills for seamless AI integration.
 
 > [!IMPORTANT]
-> **Limited Preview**: This project is currently in a limited gray release phase. Enterprise whitelist approval is required before use.
+> **Co-creation Phase**: This project accesses DingTalk enterprise data and requires enterprise admin authorization. We are currently in a gray-scale co-creation phase. Please join the DingTalk DWS co-creation group and provide the following materials to the official staff for whitelist configuration: ① Your DingTalk application's Client ID; ② Confirmation from the enterprise admin to enable access. Self-service approval by enterprise admins will be supported in the future.
+>
+> <a href="https://qr.dingtalk.com/action/joingroup?code=v1,k1,v9/YMJG9qXhvFk5juktYnQziN70rF7QHebC/JLztTVRuRVJIwrSsXmL8oFqU5ajJ&_dt_no_comment=1&origin=11"><img src="https://img.alicdn.com/imgextra/i1/O1CN01ZqtgeV1cImFmTZPAH_!!6000000003578-2-tps-398-372.png" alt="DingTalk Group QR Code" width="150"></a>
 
 <p>
-  <img src="https://img.shields.io/badge/Go-1.25+-00ADD8?logo=go&logoColor=white" alt="Go 1.25+">
+  <img src="https://img.shields.io/badge/Go-1.25+-green?logo=go&logoColor=white" alt="Go 1.25+">
   <a href="https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue" alt="License Apache-2.0"></a>
   <a href="https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases"><img src="https://img.shields.io/badge/release-v1.0.0-red" alt="v1.0.0"></a>
 </p>

@@ -4,10 +4,12 @@
 覆盖通讯录、日历、待办、考勤、智能表格等核心能力，无需样板代码即可调用，所有响应均为结构化 JSON 输出，并内置 Agent Skills 让 AI 开箱即用。
 
 > [!IMPORTANT]
-> **限量预览**：本项目当前处于小范围灰度阶段，使用前需要申请企业白名单权限。
+> **共创阶段**：本项目涉及钉钉企业数据访问，需企业管理员授权后方可使用。当前为灰度共创阶段，请加入钉钉 DWS 共创群，提供以下材料给官方人员完成白名单配置：① 钉钉应用的 Client ID；② 企业主管理员确认开通的凭证。后续将支持企业管理员自助审批开通。
+>
+> <a href="https://qr.dingtalk.com/action/joingroup?code=v1,k1,v9/YMJG9qXhvFk5juktYnQziN70rF7QHebC/JLztTVRuRVJIwrSsXmL8oFqU5ajJ&_dt_no_comment=1&origin=11"><img src="https://img.alicdn.com/imgextra/i1/O1CN01ZqtgeV1cImFmTZPAH_!!6000000003578-2-tps-398-372.png" alt="DingTalk Group QR Code" width="150"></a>
 
 <p>
-  <img src="https://img.shields.io/badge/Go-1.25+-00ADD8?logo=go&logoColor=white" alt="Go 1.25+">
+  <img src="https://img.shields.io/badge/Go-1.25+-green?logo=go&logoColor=white" alt="Go 1.25+">
   <a href="https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue" alt="License Apache-2.0"></a>
   <a href="https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases"><img src="https://img.shields.io/badge/release-v1.0.0-red" alt="v1.0.0"></a>
 </p>

@@ -17,22 +17,30 @@ func (r *captureRunner) Run(_ context.Context, invocation executor.Invocation) (
 	return executor.Result{Invocation: invocation}, nil
 }
 
-func TestChatMessageSendIgnoresLegacyRealBuildModeEnv(t *testing.T) {
+func TestChatMessageSendByBotIgnoresLegacyRealBuildModeEnv(t *testing.T) {
 	t.Setenv("DWS_"+"BUILD_MODE", "real")
 
 	runner := &captureRunner{}
-	cmd := newChatMessageSendCommand(runner)
+	cmd := newChatMessageSendByBotCommand(runner)
 
 	var out bytes.Buffer
 	cmd.SetOut(&out)
 	cmd.SetErr(&out)
-	cmd.SetArgs([]string{"--user", "user-001", "hello"})
+	cmd.SetArgs([]string{
+		"--users", "user-001",
+		"--robot-code", "robot-001",
+		"--title", "Greeting",
+		"--text", "hello",
+	})
 
 	if err := cmd.Execute(); err != nil {
 		t.Fatalf("Execute() error = %v\noutput:\n%s", err, out.String())
 	}
 
-	if got := runner.last.Params["clawType"]; got != "default" {
-		t.Fatalf("clawType = %#v, want default", got)
+	if got := runner.last.Tool; got != "batch_send_robot_msg_to_users" {
+		t.Fatalf("tool = %q, want batch_send_robot_msg_to_users", got)
+	}
+	if got := runner.last.Params["robotCode"]; got != "robot-001" {
+		t.Fatalf("robotCode = %#v, want robot-001", got)
 	}
 }

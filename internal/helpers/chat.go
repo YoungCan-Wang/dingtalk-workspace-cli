@@ -15,7 +15,6 @@ package helpers
 
 import (
 	"context"
-	"fmt"
 	"strings"
 
 	"github.com/DingTalk-Real-AI/dingtalk-workspace-cli/internal/cobracmd"
@@ -303,17 +302,6 @@ func buildChatMessageSendByBotInvocation(cmd *cobra.Command) (map[string]any, st
 
 	params["userIds"] = splitCSV(users)
 	return params, "batch_send_robot_msg_to_users", nil
-}
-
-func ensureExactlyOneTarget(left, right, leftFlag, rightFlag string) error {
-	switch {
-	case strings.TrimSpace(left) == "" && strings.TrimSpace(right) == "":
-		return apperrors.NewValidation(fmt.Sprintf("either %s or %s is required", leftFlag, rightFlag))
-	case strings.TrimSpace(left) != "" && strings.TrimSpace(right) != "":
-		return apperrors.NewValidation(fmt.Sprintf("%s and %s are mutually exclusive", leftFlag, rightFlag))
-	default:
-		return nil
-	}
 }
 
 func splitCSV(raw string) []any {

@@ -424,6 +424,9 @@ func newAITableUploadFileCommand(runner executor.Runner) *cobra.Command {
 			}
 
 			resultMap := result.Response
+			if content, ok := resultMap["content"].(map[string]any); ok && len(content) > 0 {
+				resultMap = content
+			}
 			if resultMap == nil {
 				return apperrors.NewValidation(i18n.T("prepare_attachment_upload 返回格式异常"))
 			}

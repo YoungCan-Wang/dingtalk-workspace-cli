@@ -41,7 +41,7 @@ refresh_token 单设备独占，远程刷新后源设备凭证失效。
 
 | 标志 | 短名 | 说明 | 默认 |
 |------|:---:|------|------|
-| `--format` | `-f` | 输出格式: json / table / raw | table |
+| `--format` | `-f` | 输出格式: json / table / raw | json |
 | `--verbose` | `-v` | 详细日志 | false |
 | `--debug` | | 调试日志 | false |
 | `--yes` | `-y` | 跳过确认提示 | false |
@@ -54,13 +54,13 @@ refresh_token 单设备独占，远程刷新后源设备凭证失效。
 
 ## 输出格式
 
-### --format json (机器可读, Agent 必须使用)
+### --format json (机器可读, 默认)
 
 ```json
 {"success": true, "body": {...}}
 ```
 
-### --format table (人类可读, 默认)
+### --format table (人类可读)
 
 ```
 已创建 AI 表格 "项目管理" (UUID: abc123)
